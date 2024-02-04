@@ -1,4 +1,6 @@
 # Memoteca
+ 
+## Projeto para eu relembrar conceitos de Alngular desenvolvido em curso da Alura
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
