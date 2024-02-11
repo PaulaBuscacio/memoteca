@@ -32,7 +32,8 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.pattern(/^[a-z]+$/),
         this.validarConteudoValidator
       ])],
-      modelo: ['modelo1']
+      modelo: ['modelo1'],
+      favorito: [false]
     })
   }
 
