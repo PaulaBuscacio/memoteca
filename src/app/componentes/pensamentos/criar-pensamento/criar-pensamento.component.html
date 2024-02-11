@@ -35,6 +35,10 @@
         *ngIf="formulario.get('autoria')?.errors?.['pattern'] && formulario.get('autoria')?.touched">
          A autoria precisa ser escrita com letras minúsculas!
         </div>
+      <div class="mensagem__erro"
+        *ngIf="formulario.get('autoria')?.errors?.['validadorOi']">
+         A autoria não pode ser "oi"!
+        </div>
        <label for="modelo">Selecione o modelo do card:</label>
       <div class="container-radio">
         <div class="radio-modelo">
@@ -100,11 +104,12 @@
       </div>
       <div class="acoes">
         <button
-        [disabled]="!formulario.valid"
+         [disabled]="!formulario.valid"
           (click)="criarPensamento()"
           [ngClass]="habilitarBotao()"
-          >Salvar</button>
-        <button (click)="cancelar()" class="botao">Cancelar</button>
+          >Salvar
+        </button>
+       <button (click)="cancelar()" class="botao">Cancelar</button>
       </div>
   </form>
 </section>

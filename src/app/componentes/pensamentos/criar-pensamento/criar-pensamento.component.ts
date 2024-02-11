@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { Router } from '@angular/router';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -21,21 +21,23 @@ export class CriarPensamentoComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      conteudo: ['', Validators.compose([
+      conteudo: ['',  Validators.compose([
         Validators.required,
-        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        Validators.pattern(/(.|\s)*\S(.|\s)*/),
+
       ])],
       autoria: ['', Validators.compose([
         Validators.required,
         Validators.minLength(2),
-        Validators.pattern(/^[a-z]+$/)
+        Validators.pattern(/^[a-z]+$/),
+        this.validarConteudoValidator
       ])],
       modelo: ['modelo1']
     })
   }
 
   criarPensamento() {
-    console.log(this.formulario.get('autoria')?.errors)
+    console.log(this.formulario)
     if(this.formulario.valid) {
       this.service.criar(this.formulario.value).subscribe(() =>{
         this.router.navigate(['/listarPensamento'])
@@ -54,5 +56,14 @@ export class CriarPensamentoComponent implements OnInit {
       return 'botao__desabilitado'
     }
   }
+
+  validarConteudoValidator(control: AbstractControl): ValidationErrors | null {
+    const value = control.value;
+    if(value!= 'oi') {
+      return null
+    }
+    return { 'validadorOi': true}
+  }
+
 
 }

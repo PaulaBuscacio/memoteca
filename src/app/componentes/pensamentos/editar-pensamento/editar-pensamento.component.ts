@@ -2,7 +2,7 @@ import { Pensamento } from './../pensamento';
 import { Component, OnInit } from '@angular/core';
 import { PensamentoService } from '../pensamento.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -34,7 +34,8 @@ export class EditarPensamentoComponent implements OnInit {
         autoria: [pensamento.autoria, Validators.compose([
           Validators.required,
           Validators.minLength(2),
-          Validators.pattern(/^[a-z]+$/)
+          Validators.pattern(/^[a-z]+$/),
+          this.validarConteudoValidator
         ])],
         modelo: [pensamento.modelo]
 
@@ -60,6 +61,14 @@ export class EditarPensamentoComponent implements OnInit {
     } else{
       return 'botao__desabilitado'
     }
+  }
+
+  validarConteudoValidator(control: AbstractControl): ValidationErrors | null {
+    const value = control.value;
+    if(value!= 'oi') {
+      return null
+    }
+    return { 'validadorOi': true}
   }
 
 }
