@@ -4,31 +4,85 @@
       "id": 1,
       "conteudo": "Aprendendo backend fake",
       "autoria": "Autor desconhecido 1",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "id": 2,
       "conteudo": "Angular no front",
-      "autoria": "Autor desconhecido 2",
-      "modelo": "modelo2"
+      "autoria": "autor desconhecido 2",
+      "modelo": "modelo1",
+      "favorito": false
     },
     {
       "id": 3,
       "conteudo": "Aprendendo backend fake com json-server",
       "autoria": "Autor desconhecido 3",
-      "modelo": "modelo3"
+      "modelo": "modelo3",
+      "favorito": true
     },
     {
       "conteudo": "Pensamento de Test editado",
       "autoria": "Dev editor",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 5
     },
     {
       "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "autoria": "Paula",
       "modelo": "modelo2",
+      "favorito": true,
       "id": 6
+    },
+    {
+      "id": 7,
+      "conteudo": "teste required",
+      "autoria": "faffff",
+      "modelo": "modelo2",
+      "favorito": false
+    },
+    {
+      "conteudo": "naakllaá",
+      "autoria": "asdd",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 8
+    },
+    {
+      "conteudo": "Pensamento de teste autoria validacao minúscula",
+      "autoria": "aaaa",
+      "modelo": "modelo2",
+      "favorito": true,
+      "id": 9
+    },
+    {
+      "conteudo": "swdqw",
+      "autoria": "dddd",
+      "modelo": "modelo2",
+      "favorito": false,
+      "id": 10
+    },
+    {
+      "conteudo": "Pensamento teste Paginação",
+      "autoria": "paginate",
+      "modelo": "modelo2",
+      "favorito": true,
+      "id": 11
+    },
+    {
+      "conteudo": "Quero café!",
+      "autoria": "paula buscacio 2",
+      "modelo": "modelo1",
+      "favorito": true,
+      "id": 12
+    },
+    {
+      "conteudo": "Seu eu for aí, eu acho",
+      "autoria": "mãe",
+      "modelo": "modelo1",
+      "favorito": true,
+      "id": 13
     }
   ]
 }
