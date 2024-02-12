@@ -34,7 +34,7 @@ export class EditarPensamentoComponent implements OnInit {
         autoria: [pensamento.autoria, Validators.compose([
           Validators.required,
           Validators.minLength(2),
-          Validators.pattern(/^[a-z]+$/),
+          Validators.pattern(/^[a-z0-9áàâãéèêíóôõúç'\s]+$/),
           this.validarConteudoValidator
         ])],
         modelo: [pensamento.modelo],
